@@ -4,14 +4,16 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 import TaskForm from './TaskForm';
 import TodoList from './TodoList';
+import LoginContainer from './containers/LoginContainer';
 
 const AppNavigator = createStackNavigator(
   {
+    Login: { screen: LoginContainer },
     TodoList: {screen: TodoList},
     TaskForm: {screen: TaskForm}
   },
   {
-    initialRouteName: "TodoList"
+    initialRouteName: "Login"
   }
 );
 
